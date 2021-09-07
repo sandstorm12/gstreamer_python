@@ -1,14 +1,14 @@
-# A GStreamer Guide
-If it is hard to write, it should be hard to read.
+# GStreamer Python Samples
 
-# Getting started
+A collection of various samples for learning and bootstrapping.
 
-Install gstreamer on a Debian-based system:
-```bash
-sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
-```
+## Notice
 
-## Outline:
+This project is a personal project under development. Questions, feature requests, and bug reports are much appreciated.
+
+New samples will be added gradually. If you need a certain sample, feel free to contact me at <sandstormeatwo@gmail.com>.
+
+## Table of content:
 1. Wrestle a little with different pipelines with built-in elements: [launch_pipeline](launch_pipeline)
 2. Implementing a simple element with in-place buffer modification: [base_transform_inplace](base_transform_inplace)
 3. Implementing a simple element that changes the input buffer properties: [base_transform](base_transform)
@@ -17,37 +17,68 @@ sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-pl
 6. Use appsink to obtain information out of a pipeline: [appsink](appsink)
 7. Dynamic pipelines: [add-remove-stream](add-remove-stream) [dynamic-pipe](dynamic-pipe)
 8. Use intel-gpu for hardware-accelerated decoding: [vaapi](vaapi)
-9. Use custom src to produce a custom input at the start of the pipeline. [custom_src](custom_src)
-10. Use custom sink to get pipeline data and access/modify it at the end of the pipeline. [custom_sink](custom_sink)
+9. Use custom src to produce a custom input export 
 
-## How to use the docker?
-Firstly, you need unfiltered connection to clone some of the repositories.
 
-Build docker:
+## Getting started
+
+
+### System-wide installation on Debian-based systems
 
 ```bash
-sudo docker build -t gstreamer:python .
+sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
 ```
 
-Give desktop environment access to docker:
+
+### Using docker
+
+Build docker image:
+
+```bash
+docker build -f Dockerfile -t gstreamer_python .
+```
+
+Give desktop environment access to the docker to see the pipeline output (Tested on ubuntu 20.04)
 
 ```bash
 xhost +local
 ```
 
-Run the docker with desktop environment access:
+Run the docker with desktop environment access
 
 ```bash
 sudo docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix gstreamer:python /bin/bash
 ```
 
 
-## Some essential links:
+## Urgent issues and future work
+1. Add a gitignore
+2. Remove personal information
+3. Prepare readme for each sample
+4. Refactor readme
+5. Add "how to set gstreamer python for python plugins" to the main readme
+6. Add "how to build gst-python from source" to the main readme
+
+
+## Issues and future work
+1. Make each sample more useful
+2. Refactor codes
+
+
+## Contributors
+
+1. Hamid Mohammadi <sandstormeatwo@gmail.com>
+
+
+## Useful links
+
 [How to install GStreamer python bindings](http://lifestyletransfer.com/how-to-install-gstreamer-python-bindings/)
 
 [How to implement custom python plugins](http://lifestyletransfer.com/how-to-write-gstreamer-plugin-with-python/)
 
-## Some necessary commands
+
+## Useful commands
+
 Setting GStreamer path and python plugins
 
 ```bash
@@ -65,16 +96,3 @@ How to clear GStreamer plugins cache:
 ```bash
 rm -rf ~/.cache/gstreamer-1.0/
 ```
-
-## Urgent issues and future work
-1. Add a gitignore
-2. Organize repo like your other github repos
-3. Refactor codes
-4. Remove cpp samples
-5. Remove personal information
-6. Prepare readme for each sample
-7. Make each sample more useful
-8. Refactor readme
-
-## Issues and future work
-1. [Nothing yet]
