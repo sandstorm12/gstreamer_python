@@ -14,14 +14,9 @@ New samples will be added gradually. If you need a certain sample, feel free to 
 3. Implementing a simple element that changes the input buffer properties: [base_transform](base_transform)
 4. Use meta-data in a pipeline: [meta](meta)
 5. Extend Gst.Element to build more powerful plugins and implement a muxer: [muxer](muxer)
-6. Use appsink to obtain information out of a pipeline: [appsink](appsink)
-7. Dynamic pipelines: [add-remove-stream](add-remove-stream) [dynamic-pipe](dynamic-pipe)
-8. Use intel-gpu for hardware-accelerated decoding: [vaapi](vaapi)
-9. Use custom src to produce a custom input export 
 
 
 ## Getting started
-
 
 ### System-wide installation on Debian-based systems
 
@@ -58,11 +53,17 @@ sudo docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix g
 4. Refactor readme
 5. Add "how to set gstreamer python for python plugins" to the main readme
 6. Add "how to build gst-python from source" to the main readme
+7. Refactor dot-graph examples, and maybe rename it
 
 
 ## Issues and future work
 1. Make each sample more useful
 2. Refactor codes
+3. Add "dynamic pipeline change" example
+4. Add "AppSink" example
+5. Add "Custom Src" examples
+6. Add "VAAPI" example
+7. Add "Message and event send and receive example"
 
 
 ## Contributors
