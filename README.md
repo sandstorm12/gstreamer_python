@@ -9,11 +9,15 @@ This project is a personal project under development. Questions, feature request
 New samples will be added gradually. If you need a certain sample, feel free to contact me at <sandstormeatwo@gmail.com>.
 
 ## Table of content:
-1. Wrestle a little with different pipelines with built-in elements: [launch_pipeline](launch_pipeline)
+1. Launch different pipelines with built-in elements: [launch_pipeline](launch_pipeline)
 2. Implementing a simple element with in-place buffer modification: [base_transform_inplace](base_transform_inplace)
 3. Implementing a simple element that changes the input buffer properties: [base_transform](base_transform)
 4. Use meta-data in a pipeline: [meta](meta)
 5. Extend Gst.Element to build more powerful plugins and implement a muxer: [muxer](muxer)
+6. Implement your custom sink: [custom_sink](custom_sink)
+7. Visualize your pipeline using GStreamer debug tools: [dotgraph](dotgraph)
+8. Blend two stream of videos together: [mixer](mixer)
+9. Break your pipeline into multiple branches: [tee](tee)
 
 
 ## Getting started
@@ -64,6 +68,7 @@ sudo docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix g
 5. Add "Custom Src" examples
 6. Add "VAAPI" example
 7. Add "Message and event send and receive example"
+8. Add "Video tiling example"
 
 
 ## Contributors
