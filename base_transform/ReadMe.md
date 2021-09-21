@@ -5,6 +5,8 @@ This sample is an example to demonstrate implementing a GStreamer plugin to modi
 ## Run example
 
 ```bash
+python3 -m pip install -r requirements.txt
+
 gst-launch-1.0 videotestsrc ! videoconvert ! video/x-raw,format=BGR,width=320,height=240 ! base_transform left=20 top=20 bottom=20 right=20 ! videoconvert ! autovideosink
 ```
 
