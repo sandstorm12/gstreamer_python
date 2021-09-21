@@ -4,6 +4,8 @@ A collection of various samples for learning and bootstrapping.
 
 ## Notice
 
+Firstly, these examples are heavily influenced by the works of [Tara Lishchenko](https://www.linkedin.com/in/taras-lishchenko) and his website [lifestyletransfer.com](http://lifestyletransfer.com/)
+
 This project is a personal project under development. Questions, feature requests, and bug reports are much appreciated.
 
 New samples will be added gradually. If you need a certain sample, feel free to contact me at <sandstormeatwo@gmail.com>.
