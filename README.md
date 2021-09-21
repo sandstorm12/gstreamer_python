@@ -60,6 +60,7 @@ sudo docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix g
 5. Add "how to set gstreamer python for python plugins" to the main readme
 6. Add "how to build gst-python from source" to the main readme
 7. Refactor dot-graph examples, and maybe rename it
+8. Check requirements of each example and add requirements.txt
 
 
 ## Issues and future work
